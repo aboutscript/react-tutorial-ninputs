@@ -13,11 +13,11 @@ export default class TodoList {
             <div>
                 {this.props.value.map((item, index) =>{
                     return (
-                        <div>
+                        <div key={item.id}>
                             <TodoItem
                                 value={item}
                                 onChange={this.handleItemChange.bind(this, index)}
-                                key={item.id}/>
+                            />
                             <a href="#" onClick={this.handleRemove.bind(this, index)}>x</a>
                             <hr />
                         </div>
